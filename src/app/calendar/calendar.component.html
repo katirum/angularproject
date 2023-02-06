@@ -1,0 +1,9 @@
+<div style="color: rgb(230, 204, 34); width: 500px; height: 100%; margin: 0 auto;">
+
+    <div appPaint color="pink" style="width: 500px; height: 300px; border-color: salmon; border-style: solid"></div>
+
+    <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+    {{selectedDate | date: 'full':'0100'}}
+    <a [routerLink]="['/tasks', {date: selectedDate}]">Tasks</a>
+</div>
+
